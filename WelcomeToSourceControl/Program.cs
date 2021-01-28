@@ -30,11 +30,71 @@ using System;
 
 namespace WelcomeToSourceControl
 {
+    public class Person
+    {
+        private string _FName;
+        public string FName
+        {
+            get => _FName;
+            set => _FName = value.Length == 0 ? _FName = "Unknown" : _FName = value;
+        }
+
+        private string _LName;
+        public string LName
+        {
+            get => _LName;
+            set => _LName = value.Length == 0 ? _LName = "Unknown" : _LName = value;
+        }
+
+        private DateTime _DOB;
+        public string DOB
+        {
+            get => Convert.ToString(_DOB);
+            set
+            {
+                if (DateTime.TryParse(Convert.ToString(value), out _DOB));
+                else _DOB = Convert.ToDateTime("01-01-1901"); // Set the date to 01-01-1901. I wouldn't do it this way usually.
+            }
+        }
+
+        public Person()
+        {
+
+        }
+
+        public Person(string fname, string lname, string dob)
+        {
+            FName = fname;
+            LName = lname;
+            DOB = dob;
+        }
+
+        public static string GetInput(string msg)
+        {
+            Console.Write($"{msg}");
+            return Console.ReadLine();
+        }
+    }
+
     class MainClass
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Create and prompt the user for input on seperate lines
+            Person person = new Person();
+
+            person.FName = Person.GetInput("Enter First Name: ");
+            person.LName = Person.GetInput("Enter Last Name: ");
+            person.DOB = Person.GetInput("Enter DOB: ");
+
+            Console.WriteLine($"{person.FName}, {person.LName}, {person.DOB}\n");
+
+            // Create and prompt the user on the same line.
+            Person person2 = new Person(Person.GetInput("Enter First Name: "), Person.GetInput("Enter Last Name: "), Person.GetInput("Enter DOB: "));
+
+            Console.WriteLine($"{person2.FName}, {person2.LName}, {person2.DOB}\n");
+
+            Console.ReadKey(true);
         }
     }
 }
