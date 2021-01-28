@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WelcomeToSourceControl", "WelcomeToSourceControl\WelcomeToSourceControl.csproj", "{58300EAD-ADF9-495F-A231-8D7FD9A4BB67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58300EAD-ADF9-495F-A231-8D7FD9A4BB67}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{58300EAD-ADF9-495F-A231-8D7FD9A4BB67}.Debug|anycpu.Build.0 = Debug|anycpu
+		{58300EAD-ADF9-495F-A231-8D7FD9A4BB67}.Release|anycpu.ActiveCfg = Release|anycpu
+		{58300EAD-ADF9-495F-A231-8D7FD9A4BB67}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1494A50-7565-473F-8D3F-4FCE44C6AED8}
+	EndGlobalSection
+EndGlobal
